@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesar</title>
+</head>
+<body>
+    <h1>Cesar Cypher</h1>
+    <p>Vanilla JS</p>
+
+    <h3>Cypher Key</h3>
+    <form action="" method="post" id="cesar-form">
+        <label for="key"></label>
+        <input type="number" id="cipher-key" data-cy="cipher-key" name="key" placeholder="saisir un chiffre">
+
+        <label for="description"></label>
+        <input type="text" name="desc" id="cipher-message" data-cy="cipher-message" placeholder="ecrire un text">
+
+        <input type="submit" name="submit" data-cy="ciper-button" value="Cypher">
+    </form>
+
+    <div id="result" data-cy="cipher-result"></div>
+
+    <script src="cesar.js"></script>
+
+</body>
+</html>
