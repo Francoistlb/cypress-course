@@ -25,5 +25,14 @@ context('Lightbox', () => {
         cy.dataCy('cipher-over-count').should('have.text', '1'); 
         cy.dataCy('cipher-open-count').should('have.text','1'); 
     });
-
+    it('check lightbox like button on second click', () => {
+        cy.dataCy('cipher-open').click();
+        cy.dataCy('cipher-lightbox').should('be.visible'); 
+        cy.dataCy('cipher-like-button').click();
+        cy.dataCy('cipher-over-count').should('have.text', '1'); 
+        cy.dataCy('cipher-open-count').should('have.text','1'); 
+        cy.dataCy('cipher-like-button').click();
+        cy.dataCy('cipher-over-count').should('have.text', '0'); 
+        cy.dataCy('cipher-open-count').should('have.text','0'); 
+    });
 });
